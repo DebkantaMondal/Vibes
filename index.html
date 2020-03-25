@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 17px;
+  font-family: 'Roboto';
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
+  color: #f1f1f1;
+  width: 100%;
+  height: 30%;
+  padding: 30px;
+  opacity:0.9;
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.overlay {
+  min-height: 10vh;
+  display: flex;
+  align-items: right;
+  justify-content: center;
+  
+}
+
+.overlay img {
+    background: #ffffff none repeat scroll 0 0;
+    color: #000;
+    font-weight: 100;
+    margin: 2rem 8rem 0;
+    mix-blend-mode: overlay;
+    padding: 5px 5px;
+    text-align: right;
+	border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+.overlay h1 {
+    background: #ffffff none repeat scroll 0 0;
+    color: #000;
+    font-weight: 100;
+    margin: 2rem 8rem 0;
+    mix-blend-mode: overlay;
+    padding: 5px 5px;
+    text-align: right;
+	border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+	font-family: Roboto;
+}
+
+.btn:hover {
+  background-position: right center;
+}
+
+.btn{
+  width: 300px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 30px;
+  background-image: linear-gradient(to right, #ee0979 0%, #ff6a00 51%, #ee0979 100%);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+</style>
+</head>
+<body>
+<audio autoplay loop id="myAudio">
+      <source src="nam_apna.mp3" type="audio/mp3">
+</audio>
+<video autoplay muted loop id="myVideo">
+  <source src="tinder.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+
+
+<div class="overlay">
+  <img src="https://img.icons8.com/cotton/40/000000/menu.png"/>
+  <h1>VIBES</h1>
+</div>
+
+<div class="content">
+  <center>
+  <p>Hi!, Enjoy the Life with Vibes , an Online Dedicated Dating App... Great Vibes & Great Date with Your Choiced Guys & Fabulous Enjoyment Forever.... Remove Stress Just in One
+  Click On It.... Let's Go</p>
+  <!--<p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>
+  -->
+  </center>
+  <center>
+  <button id="myBtn" class="btn" >LOGIN WITH INSTAGRAM</button>
+  </center>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+
+</body>
+</html>
